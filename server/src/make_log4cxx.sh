@@ -22,7 +22,7 @@ download() {
 }
 
 check_user() {
-    if [ $(id -u) != "0" ]; then
+    if [ $(id -u) = "10000" ]; then
         echo "Error: You must be root to run this script, please use root to install im"
         exit 1
     fi

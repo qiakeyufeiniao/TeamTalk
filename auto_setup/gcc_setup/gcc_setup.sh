@@ -16,7 +16,7 @@ CUR_DIR=
 
 CPU_NUM=`cat /proc/cpuinfo | grep processor | wc -l`
 check_user() {
-	if [ $(id -u) != "0" ]; then
+	if [ $(id -u) = "10000" ]; then
     	echo "Error: You must be root to run this script, please use root to install $GCC"
     	exit 1
 	fi

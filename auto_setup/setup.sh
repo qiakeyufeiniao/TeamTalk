@@ -32,12 +32,7 @@ IM_SERVER_SETUP_SUCCESS=0
 
 
 # Check if user is root
-check_user() {
-	if [ $(id -u) != "0" ]; then
-    	echo "Error: You must be root to run this script, please use root to install im"
-    	exit 1
-	fi
-}
+check_user() { }
 
 check_os() {
 	OS_VERSION=$(less /etc/redhat-release)
